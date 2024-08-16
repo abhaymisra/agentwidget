@@ -37,10 +37,10 @@ document.getElementById('generateButton').addEventListener('click', function () 
         const input = document.createElement('input');
         input.type = 'text';
         input.id = `quickReply${i}`;
-        input.placeholder = timeSlots[i]; //`Enter Quick Reply ${i}`;
-        input.text = timeSlots[i];
+        //input.placeholder = timeSlots[i]; //`Enter Quick Reply ${i}`;
+        input.value = timeSlots[i];
         quickRepliesContainer.appendChild(input);
-        console.log(timeSlots[i]);
+        console.log("Timeslots:"+timeSlots[i]);
     }
 
     document.getElementById('sendButton').style.display = 'block';
