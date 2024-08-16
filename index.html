@@ -1,69 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>MOVIE SEARCH</title>
-  <link rel="stylesheet" href="style.css">
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Quick Replies</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div id="name">
-  </div>
+    <div class="container">
+        <h1>Agent Quick Replies</h1>
 
-  <!-- CLASS FIRST -->
-  <div class="first">
-    <h1>MOVIE SEARCH</h1>
-  </div>
+        <label for="numQuickReplies">Number of Quick Replies:</label>
+        <input type="number" id="numQuickReplies" placeholder="Enter number of quick replies" min="1" max="10">
 
-  <!-- CLASS CONTAINER -->
+        <button id="generateButton">Generate Quick Replies</button>
 
-  <div class="container">
-    <form class="third"></form>
-    <p>
-      <input type="search" placeholder="Search.." id="mySearch" name="search"> <button type="submit"
-        onclick="myFunction()">&#128269<i class="search"></i></button>
-    </P>
-    </form>
-    <button onclick="myFunction()"><b> Send </b></button>
-  </div>
+        <div id="quickRepliesContainer"></div>
 
-  <!-- CLASS SECOND -->
-  <div class="second">
-    <h2>TITLE</h2>
-  </div>
+        <button id="sendButton" style="display:none;">Send Quick Replies</button>
+    </div>
 
-  <!-- class_2 -->
-
-  <div id="title" class="div2"></div>
-
-  <!-- CLASS THIRD -->
-  <div class="Third">
-    <h2>RELEASED</h2>
-  </div>
-
-
-  <!-- class_3 -->
-
-  <div id="released" class="div3"></div>
-
-  <!-- CLASS FOURTH -->
-  <div class="Fourth">
-    <h2>DIRECTOR</h2>
-  </div>
-
-
-  <!-- class_4 -->
-
-  <div id="director" class="div4"></div>
-
-
-  <script src="script.js">
-  </script>
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/liveperson-agent-sdk/dist/liveperson-agent-sdk.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
