@@ -18,7 +18,11 @@ lpTag.agentSDK.init({
 });
 
 document.getElementById('generateButton').addEventListener('click', function () {
-    const numQuickReplies = document.getElementById('numQuickReplies').value;
+    const timeSlots = ["8/18 5:30PM","8/18 6:30PM","8/18 7:30PM","8/18 8:30PM"];
+   // const numQuickReplies = document.getElementById('numQuickReplies').value;
+
+    const numQuickReplies = timeSlots.length();
+    
     const quickRepliesContainer = document.getElementById('quickRepliesContainer');
     quickRepliesContainer.innerHTML = ''; // Clear previous inputs
 
