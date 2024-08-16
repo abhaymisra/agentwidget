@@ -21,7 +21,7 @@ document.getElementById('generateButton').addEventListener('click', function () 
     const timeSlots = ["8/18 5:30PM","8/18 6:30PM","8/18 7:30PM","8/18 8:30PM"];
    // const numQuickReplies = document.getElementById('numQuickReplies').value;
 
-    const numQuickReplies = timeSlots.length();
+    const numQuickReplies = timeSlots.length;
     
     const quickRepliesContainer = document.getElementById('quickRepliesContainer');
     quickRepliesContainer.innerHTML = ''; // Clear previous inputs
@@ -29,7 +29,7 @@ document.getElementById('generateButton').addEventListener('click', function () 
     console.log(numQuickReplies);
     console.log(typeof numQuickReplies);
 
-    for (let i = 1; i <= numQuickReplies; i++) {
+    for (let i = 0; i < numQuickReplies; i++) {
         const label = document.createElement('label');
         label.innerText = `Quick Reply ${i}:`;
         quickRepliesContainer.appendChild(label);
@@ -37,7 +37,8 @@ document.getElementById('generateButton').addEventListener('click', function () 
         const input = document.createElement('input');
         input.type = 'text';
         input.id = `quickReply${i}`;
-        input.placeholder = `Enter Quick Reply ${i}`;
+        //input.placeholder = `Enter Quick Reply ${i}`;
+        input.text = timeSlots[i];
         quickRepliesContainer.appendChild(input);
     }
 
@@ -46,7 +47,8 @@ document.getElementById('generateButton').addEventListener('click', function () 
 
 document.getElementById('sendButton').addEventListener('click', function () {
     //const conversationId = document.getElementById('conversationId').value;
-    const numQuickReplies = document.getElementById('numQuickReplies').value;
+    //const numQuickReplies = document.getElementById('numQuickReplies').value;
+    const numQuickReplies = timeSlots.length;
     const quickReplies = [];
 
     for (let i = 1; i <= numQuickReplies; i++) {
